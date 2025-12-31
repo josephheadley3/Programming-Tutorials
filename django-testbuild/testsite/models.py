@@ -1,5 +1,5 @@
 from django.db import models
-from django import forms
+
 
 # Create your models here.
 class PasswordEntry(models.Model):
@@ -28,10 +28,3 @@ class PasswordEntry(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
 
-class PasswordEntryForm(forms.ModelForm):
-    class Meta:
-        model = PasswordEntry
-        fields = ['organization', 'website', 'category', 'email', 'username', 'password']
-        widgets = {
-            'password': forms.PasswordInput(), 
-        }

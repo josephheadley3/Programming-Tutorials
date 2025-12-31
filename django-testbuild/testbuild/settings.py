@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'testsite',
+    'formtools',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'testbuild.wsgi.application'
+
+
+LOGIN_REDIRECT_URL = '/' # Redirect to home page after login
+LOGOUT_REDIRECT_URL = '/accounts/login/' # Redirect to login page after logout
+LOGIN_URL = '/accounts/login/' # Define the URL for the login page
 
 
 # Database
